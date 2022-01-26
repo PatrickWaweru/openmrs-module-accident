@@ -9,18 +9,18 @@
     </parent>
 
 	<groupId>org.openmrs.module</groupId>
-	<artifactId>kenyaemr.patrick.test</artifactId>
+	<artifactId>kenyaemrAccident</artifactId>
 	<version>1.2.5</version>
 	<packaging>pom</packaging>
-	<name>KenyaEMR Patrick Test</name>
-	<description>A sample kenyaemr module developed by patrick</description>
+	<name>KenyaEMR Accident Module</name>
+	<description>A sample kenyaemr accident module</description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
 
 	<scm>
-		<connection>scm:git:git@github.com:openmrs/openmrs-module-kenyaemr.patrick.test.git</connection>
-		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-kenyaemr.patrick.test.git</developerConnection>
-		<url>https://github.com/openmrs/openmrs-module-kenyaemr.patrick.test/</url>
+		<connection>scm:git:git@github.com:openmrs/openmrs-module-kenyaemrAccident.git</connection>
+		<developerConnection>scm:git:git@github.com:openmrs/openmrs-module-kenyaemrAccident.git</developerConnection>
+		<url>https://github.com/openmrs/openmrs-module-kenyaemrAccident/</url>
 	</scm>
 
 	<modules>

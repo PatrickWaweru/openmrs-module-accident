@@ -7,16 +7,16 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.api;
+package org.openmrs.module.kenyaemrAccident.api;
 
 import java.util.List;
 
 import org.openmrs.annotation.Authorized;
 import org.openmrs.api.APIException;
 import org.openmrs.api.OpenmrsService;
-import org.openmrs.module.kenyaemr.patrick.test.KenyaEMRPatrickTestConfig;
-import org.openmrs.module.kenyaemr.patrick.test.Department;
-import org.openmrs.module.kenyaemr.patrick.test.Item;
+import org.openmrs.module.kenyaemrAccident.KenyaEMRPatrickTestConfig;
+import org.openmrs.module.kenyaemrAccident.Department;
+import org.openmrs.module.kenyaemrAccident.Item;
 import org.springframework.transaction.annotation.Transactional;
 
 /**

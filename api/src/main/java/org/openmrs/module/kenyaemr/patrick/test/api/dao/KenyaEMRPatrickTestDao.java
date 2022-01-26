@@ -7,19 +7,19 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.api.dao;
+package org.openmrs.module.kenyaemrAccident.api.dao;
 
 import java.util.List;
 
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.api.db.hibernate.DbSession;
 import org.openmrs.api.db.hibernate.DbSessionFactory;
-import org.openmrs.module.kenyaemr.patrick.test.Department;
-import org.openmrs.module.kenyaemr.patrick.test.Item;
+import org.openmrs.module.kenyaemrAccident.Department;
+import org.openmrs.module.kenyaemrAccident.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
-@Repository("kenyaemr.patrick.test.KenyaEMRPatrickTestDao")
+@Repository("kenyaemrAccident.KenyaEMRPatrickTestDao")
 public class KenyaEMRPatrickTestDao {
 	
 	@Autowired

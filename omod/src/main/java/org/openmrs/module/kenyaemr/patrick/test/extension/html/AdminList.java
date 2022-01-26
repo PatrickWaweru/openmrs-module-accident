@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.extension.html;
+package org.openmrs.module.kenyaemrAccident.extension.html;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,8 +17,8 @@ import org.openmrs.module.web.extension.AdministrationSectionExt;
 
 /**
  * This class defines the links that will appear on the administration page under the
- * "kenyaemr.patrick.test.title" heading. This extension is enabled by defining (uncommenting) it in
- * the config.xml file.
+ * "kenyaemrAccident.title" heading. This extension is enabled by defining (uncommenting) it in the
+ * config.xml file.
  */
 public class AdminList extends AdministrationSectionExt {
 	
@@ -33,7 +33,7 @@ public class AdminList extends AdministrationSectionExt {
 	 * @see org.openmrs.module.web.extension.AdministrationSectionExt#getTitle()
 	 */
 	public String getTitle() {
-		return "kenyaemr.patrick.test.title";
+		return "kenyaemrAccident.title";
 	}
 	
 	/**
@@ -43,7 +43,7 @@ public class AdminList extends AdministrationSectionExt {
 		
 		Map<String, String> map = new HashMap<String, String>();
 		
-		map.put("module/kenyaemr.patrick.test/kenyaemr.patrick.test.form", "kenyaemr.patrick.test.title");
+		map.put("module/kenyaemrAccident/kenyaemrAccident.form", "kenyaemrAccident.title");
 		
 		return map;
 	}

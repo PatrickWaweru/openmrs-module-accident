@@ -7,14 +7,14 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test;
+package org.openmrs.module.kenyaemrAccident;
 
 import org.springframework.stereotype.Component;
 
 /**
  * Contains module's config.
  */
-@Component("kenyaemr.patrick.test.KenyaEMRPatrickTestConfig")
+@Component("kenyaemrAccident.KenyaEMRPatrickTestConfig")
 public class KenyaEMRPatrickTestConfig {
 	
 	public final static String MODULE_PRIVILEGE = "KenyaEMR Patrick Test Privilege";

@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.web.controller;
+package org.openmrs.module.kenyaemrAccident.web.controller;
 
 import java.util.List;
 
@@ -19,8 +19,8 @@ import org.openmrs.User;
 import org.openmrs.api.UserService;
 import org.openmrs.api.context.Context;
 import org.openmrs.messagesource.MessageSourceService;
-import org.openmrs.module.kenyaemr.patrick.test.Department;
-import org.openmrs.module.kenyaemr.patrick.test.api.KenyaEMRPatrickTestService;
+import org.openmrs.module.kenyaemrAccident.Department;
+import org.openmrs.module.kenyaemrAccident.api.KenyaEMRPatrickTestService;
 import org.openmrs.web.WebConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,7 +38,7 @@ import org.springframework.web.context.request.WebRequest;
  */
 @Controller("${rootrootArtifactid}.KenyaEMRPatrickTestController")
 //@RequestMapping(value = "module/${rootArtifactid}/${rootArtifactid}.form")
-@RequestMapping(value = "module/kenyaemr.patrick.test/kenyaemr.patrick.test.form")
+@RequestMapping(value = "module/kenyaemrAccident/kenyaemrAccident.form")
 public class KenyaEMRPatrickTestController {
 	
 	/** Logger for this class and subclasses */
@@ -49,7 +49,7 @@ public class KenyaEMRPatrickTestController {
 	
 	/** Success form view name */
 	//private final String VIEW = "/module/${rootArtifactid}/${rootArtifactid}";
-	private final String VIEW = "/module/kenyaemr.patrick.test/kenyaemr.patrick.test";
+	private final String VIEW = "/module/kenyaemrAccident/kenyaemrAccident";
 	
 	/**
 	 * Initially called after the getUsers method to get the landing form name
@@ -94,7 +94,7 @@ public class KenyaEMRPatrickTestController {
 		return users;
 	}
 	
-	@RequestMapping(value = "/module/kenyaemr.patrick.test/kenyaemr.patrick.test.form", method = RequestMethod.POST)
+	@RequestMapping(value = "/module/kenyaemrAccident/kenyaemrAccident.form", method = RequestMethod.POST)
 	public String submitDepartment(WebRequest request, HttpSession httpSession, ModelMap model,
 	        @RequestParam(required = false, value = "action") String action,
 	        @ModelAttribute("department") Department department, BindingResult errors) {

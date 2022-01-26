@@ -23,18 +23,18 @@
   		    http://www.springframework.org/schema/util
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
-    <context:component-scan base-package="org.openmrs.module.kenyaemr.patrick.test" />
+    <context:component-scan base-package="org.openmrs.module.kenyaemrAccident" />
 
     <!-- Wraps KenyaEMRPatrickTestService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->
-    <bean id="kenyaemr.patrick.test.KenyaEMRPatrickTestService"
+    <bean id="kenyaemrAccident.KenyaEMRPatrickTestService"
             class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <ref bean="transactionManager" />
         </property>
         <property name="target">
-            <bean class="org.openmrs.module.kenyaemr.patrick.test.api.impl.KenyaEMRPatrickTestServiceImpl">
-                <property name="dao" ref="kenyaemr.patrick.test.KenyaEMRPatrickTestDao" />
+            <bean class="org.openmrs.module.kenyaemrAccident.api.impl.KenyaEMRPatrickTestServiceImpl">
+                <property name="dao" ref="kenyaemrAccident.KenyaEMRPatrickTestDao" />
             </bean>
         </property>
         <property name="preInterceptors">
@@ -50,8 +50,8 @@
     <bean parent="serviceContext">
         <property name="moduleService">
             <list>
-                <value>org.openmrs.module.kenyaemr.patrick.test.api.KenyaEMRPatrickTestService</value>
-                <ref bean="kenyaemr.patrick.test.KenyaEMRPatrickTestService" />
+                <value>org.openmrs.module.kenyaemrAccident.api.KenyaEMRPatrickTestService</value>
+                <ref bean="kenyaemrAccident.KenyaEMRPatrickTestService" />
             </list>
         </property>
     </bean>

@@ -7,17 +7,17 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.api.impl;
+package org.openmrs.module.kenyaemrAccident.api.impl;
 
 import java.util.List;
 
 import org.openmrs.api.APIException;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
-import org.openmrs.module.kenyaemr.patrick.test.Department;
-import org.openmrs.module.kenyaemr.patrick.test.Item;
-import org.openmrs.module.kenyaemr.patrick.test.api.KenyaEMRPatrickTestService;
-import org.openmrs.module.kenyaemr.patrick.test.api.dao.KenyaEMRPatrickTestDao;
+import org.openmrs.module.kenyaemrAccident.Department;
+import org.openmrs.module.kenyaemrAccident.Item;
+import org.openmrs.module.kenyaemrAccident.api.KenyaEMRPatrickTestService;
+import org.openmrs.module.kenyaemrAccident.api.dao.KenyaEMRPatrickTestDao;
 
 public class KenyaEMRPatrickTestServiceImpl extends BaseOpenmrsService implements KenyaEMRPatrickTestService {
 	

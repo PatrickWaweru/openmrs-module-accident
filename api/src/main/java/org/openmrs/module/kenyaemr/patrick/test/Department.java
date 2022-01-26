@@ -1,4 +1,4 @@
-package org.openmrs.module.kenyaemr.patrick.test;
+package org.openmrs.module.kenyaemrAccident;
 
 import org.openmrs.BaseOpenmrsData;
 import org.openmrs.User;

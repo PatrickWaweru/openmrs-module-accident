@@ -1,2 +1,2 @@
-org/openmrs/module/kenyaemr/patrick/test/api/dao/KenyaEMRPatrickTestDaoTest.class
-org/openmrs/module/kenyaemr/patrick/test/api/KenyaEMRPatrickTestServiceTest.class
+org/openmrs/module/kenyaemrAccident/api/dao/KenyaEMRPatrickTestDaoTest.class
+org/openmrs/module/kenyaemrAccident/api/KenyaEMRPatrickTestServiceTest.class

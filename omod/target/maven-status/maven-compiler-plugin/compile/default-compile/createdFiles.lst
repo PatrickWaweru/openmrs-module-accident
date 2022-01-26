@@ -1,2 +1,2 @@
-org/openmrs/module/kenyaemr/patrick/test/web/controller/KenyaEMRPatrickTestController.class
-org/openmrs/module/kenyaemr/patrick/test/extension/html/AdminList.class
+org/openmrs/module/kenyaemrAccident/extension/html/AdminList.class
+org/openmrs/module/kenyaemrAccident/web/controller/KenyaEMRPatrickTestController.class

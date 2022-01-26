@@ -7,7 +7,7 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemr.patrick.test.api;
+package org.openmrs.module.kenyaemrAccident.api;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -16,9 +16,9 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.openmrs.User;
 import org.openmrs.api.UserService;
-import org.openmrs.module.kenyaemr.patrick.test.Item;
-import org.openmrs.module.kenyaemr.patrick.test.api.dao.KenyaEMRPatrickTestDao;
-import org.openmrs.module.kenyaemr.patrick.test.api.impl.KenyaEMRPatrickTestServiceImpl;
+import org.openmrs.module.kenyaemrAccident.Item;
+import org.openmrs.module.kenyaemrAccident.api.dao.KenyaEMRPatrickTestDao;
+import org.openmrs.module.kenyaemrAccident.api.impl.KenyaEMRPatrickTestServiceImpl;
 import static org.mockito.Mockito.*;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.*;
