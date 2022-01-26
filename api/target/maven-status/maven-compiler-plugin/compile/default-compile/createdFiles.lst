@@ -1,0 +1,7 @@
+org/openmrs/module/kenyaemr/patrick/test/api/impl/KenyaEMRPatrickTestServiceImpl.class
+org/openmrs/module/kenyaemr/patrick/test/api/dao/KenyaEMRPatrickTestDao.class
+org/openmrs/module/kenyaemr/patrick/test/Department.class
+org/openmrs/module/kenyaemr/patrick/test/KenyaEMRPatrickTestActivator.class
+org/openmrs/module/kenyaemr/patrick/test/Item.class
+org/openmrs/module/kenyaemr/patrick/test/KenyaEMRPatrickTestConfig.class
+org/openmrs/module/kenyaemr/patrick/test/api/KenyaEMRPatrickTestService.class
