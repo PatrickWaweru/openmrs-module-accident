@@ -1,7 +1,0 @@
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/Department.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/KenyaEMRPatrickTestConfig.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/api/KenyaEMRPatrickTestService.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/api/impl/KenyaEMRPatrickTestServiceImpl.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/Item.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/api/dao/KenyaEMRPatrickTestDao.java
-/opt/develop/palladium/init/kenyaemr.patrick.test/api/src/main/java/org/openmrs/module/kenyaemr/patrick/test/KenyaEMRPatrickTestActivator.java

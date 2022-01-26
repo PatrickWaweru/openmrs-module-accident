@@ -1,7 +1,0 @@
-org/openmrs/module/kenyaemrAccident/Item.class
-org/openmrs/module/kenyaemrAccident/KenyaEMRPatrickTestConfig.class
-org/openmrs/module/kenyaemrAccident/KenyaEMRPatrickTestActivator.class
-org/openmrs/module/kenyaemrAccident/api/KenyaEMRPatrickTestService.class
-org/openmrs/module/kenyaemrAccident/Department.class
-org/openmrs/module/kenyaemrAccident/api/dao/KenyaEMRPatrickTestDao.class
-org/openmrs/module/kenyaemrAccident/api/impl/KenyaEMRPatrickTestServiceImpl.class
