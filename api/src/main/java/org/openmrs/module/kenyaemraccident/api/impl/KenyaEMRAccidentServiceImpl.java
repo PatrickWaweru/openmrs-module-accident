@@ -52,33 +52,36 @@ public class KenyaEMRAccidentServiceImpl extends BaseOpenmrsService implements K
 		
 		return dao.saveItem(item);
 	}
-
+	
 	/**
-     * @see org.openmrs.module.department.api.DepartmentService#getAllDepartments()
-     */
-    @Override
-    public List<Department> getAllDepartments() {
-        return dao.getAllDepartments();
-    }
-    /**
-     * @see org.openmrs.module.department.api.DepartmentService#getDepartment(java.lang.Integer)
-     */
-    @Override
-    public Department getDepartment(Integer departmentId) {
-        return dao.getDepartment(departmentId);
-    }
-    /**
-     * @see org.openmrs.module.department.api.DepartmentService#saveDepartment(org.openmrs.module.department.Department)
-     */
-    @Override
-    public Department saveDepartment(Department department) {
-        return dao.saveDepartment(department);
-    }
-    /**
-     * @see org.openmrs.module.department.api.DepartmentService#purgeDepartment(org.openmrs.module.department.Department)
-     */
-    @Override
-    public void purgeDepartment(Department department) {
-        dao.purgeDepartment(department);
-    }
+	 * @see org.openmrs.module.department.api.DepartmentService#getAllDepartments()
+	 */
+	@Override
+	public List<Department> getAllDepartments() {
+		return dao.getAllDepartments();
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#getDepartment(java.lang.Integer)
+	 */
+	@Override
+	public Department getDepartment(Integer departmentId) {
+		return dao.getDepartment(departmentId);
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#saveDepartment(org.openmrs.module.department.Department)
+	 */
+	@Override
+	public Department saveDepartment(Department department) {
+		return dao.saveDepartment(department);
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#purgeDepartment(org.openmrs.module.department.Department)
+	 */
+	@Override
+	public void purgeDepartment(Department department) {
+		dao.purgeDepartment(department);
+	}
 }

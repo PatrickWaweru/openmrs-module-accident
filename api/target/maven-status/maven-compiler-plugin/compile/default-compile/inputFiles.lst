@@ -4,3 +4,4 @@
 /opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/api/dao/KenyaEMRAccidentDao.java
 /opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/api/KenyaEMRAccidentService.java
 /opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/KenyaEMRAccidentActivator.java
+/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/Department.java

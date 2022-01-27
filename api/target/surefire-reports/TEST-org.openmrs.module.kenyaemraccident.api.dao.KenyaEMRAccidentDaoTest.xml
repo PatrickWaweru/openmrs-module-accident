@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="org.openmrs.module.kenyaemraccident.api.dao.KenyaEMRAccidentDaoTest" time="0.025" errors="0" skipped="1">
+<testsuite tests="1" failures="0" name="org.openmrs.module.kenyaemraccident.api.dao.KenyaEMRAccidentDaoTest" time="0.017" errors="0" skipped="1">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="/opt/java/jdk1.8.0_311/jre/lib/amd64"/>
@@ -61,7 +61,7 @@
     <property name="sun.desktop" value="gnome"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="org.openmrs.module.kenyaemraccident.api.dao.KenyaEMRAccidentDaoTest" name="saveItem_shouldSaveAllPropertiesInDb" time="0.025">
+  <testcase classname="org.openmrs.module.kenyaemraccident.api.dao.KenyaEMRAccidentDaoTest" name="saveItem_shouldSaveAllPropertiesInDb" time="0.017">
     <skipped message="Unignore if you want to make the Item class persistable, see also Item and liquibase.xml"/>
   </testcase>
 </testsuite>

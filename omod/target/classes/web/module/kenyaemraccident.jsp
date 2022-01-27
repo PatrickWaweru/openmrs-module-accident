@@ -1,3 +1,11 @@
+<%@ include file="/WEB-INF/template/include.jsp"%>
+
+<%@ include file="/WEB-INF/template/header.jsp"%>
+
+<h2><spring:message code="kenyaemraccident.title" /></h2>
+
+<br/>
+
 <form method="post">
   <fieldset>
   <table>
@@ -21,6 +29,8 @@
       </tr>
   </table>
   <br />
-  <input type="submit" value="<openmrs:message code="department.save"/>" name="save">
+  <input type="submit" value="<openmrs:message code='department.save'/>" name="save">
   </fieldset>
 </form>
+
+<%@ include file="/WEB-INF/template/footer.jsp"%>

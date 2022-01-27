@@ -7,7 +7,8 @@
  * Copyright (C) OpenMRS Inc. OpenMRS is a registered trademark and the OpenMRS
  * graphic logo is a trademark of OpenMRS Inc.
  */
-package org.openmrs.module.kenyaemraccident.api;
+////package org.openmrs.module.kenyaemraccident.api;
+package org.openmrs.module.kenyaemraccident;
 
 import org.junit.Before;
 import org.junit.Test;

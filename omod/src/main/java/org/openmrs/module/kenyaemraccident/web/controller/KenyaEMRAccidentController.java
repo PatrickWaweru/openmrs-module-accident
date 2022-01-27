@@ -24,6 +24,7 @@ import org.openmrs.module.kenyaemraccident.api.KenyaEMRAccidentService;
 import org.openmrs.web.WebConstants;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -56,8 +57,14 @@ public class KenyaEMRAccidentController {
 	 * 
 	 * @return String form view name
 	 */
+	// @RequestMapping(method = RequestMethod.GET)
+	// public String onGet() {
+	// 	model.addAttribute("person", new Person());
+	// 	return VIEW;
+	// }
 	@RequestMapping(method = RequestMethod.GET)
-	public String onGet() {
+	public String onGet(Model model) {
+		model.addAttribute("department", new Department());
 		return VIEW;
 	}
 	
@@ -69,16 +76,16 @@ public class KenyaEMRAccidentController {
 	 * @param errors
 	 * @return
 	 */
-	@RequestMapping(method = RequestMethod.POST)
-	public String onPost(HttpSession httpSession, @ModelAttribute("anyRequestObject") Object anyRequestObject,
-	        BindingResult errors) {
-		
-		if (errors.hasErrors()) {
-			// return error view
-		}
-		
-		return VIEW;
-	}
+	// @RequestMapping(method = RequestMethod.POST)
+	// public String onPost(HttpSession httpSession, @ModelAttribute("anyRequestObject") Object anyRequestObject,
+	//         BindingResult errors) {
+	
+	// 	if (errors.hasErrors()) {
+	// 		// return error view
+	// 	}
+	
+	// 	return VIEW;
+	// }
 	
 	/**
 	 * This class returns the form backing object. This can be a string, a boolean, or a normal java
@@ -93,9 +100,10 @@ public class KenyaEMRAccidentController {
 		// that is defined in the @ModuleAttribute tag
 		return users;
 	}
-
+	
 	/**
 	 * To allow posting data
+	 * 
 	 * @param request
 	 * @param httpSession
 	 * @param model
@@ -104,31 +112,32 @@ public class KenyaEMRAccidentController {
 	 * @param errors
 	 * @return
 	 */
-	@RequestMapping(value = "/module/kenyaemraccident/kenyaemraccident.form", method = RequestMethod.POST)
-    public String submitDepartment(WebRequest request, HttpSession httpSession, ModelMap model,
-                                   @RequestParam(required = false, value = "action") String action,
-                                   @ModelAttribute("department") Department department, BindingResult errors) {
-
-        MessageSourceService mss = Context.getMessageSourceService();
-        KenyaEMRAccidentService departmentService = Context.getService(KenyaEMRAccidentService.class);
-        if (!Context.isAuthenticated()) {
-            errors.reject("department.auth.required");
-        } else if (mss.getMessage("department.purgeDepartment").equals(action)) {
-            try {
-                departmentService.purgeDepartment(department);
-                httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.delete.success");
-                return "redirect:departmentList.list";
-            }
-            catch (Exception ex) {
-                httpSession.setAttribute(WebConstants.OPENMRS_ERROR_ATTR, "department.delete.failure");
-                log.error("Failed to delete department", ex);
-                return "redirect:departmentForm.form?departmentId=" + request.getParameter("departmentId");
-            }
-        } else {
-            departmentService.saveDepartment(department);
-            httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.saved");
-        }
-        return "redirect:departmentList.list";
-    }
+	////@RequestMapping(value = "/module/kenyaemraccident/kenyaemraccident.form", method = RequestMethod.POST)
+	@RequestMapping(method = RequestMethod.POST)
+	public String submitDepartment(WebRequest request, HttpSession httpSession, ModelMap model,
+	        @RequestParam(required = false, value = "action") String action,
+	        @ModelAttribute("department") Department department, BindingResult errors) {
+		
+		MessageSourceService mss = Context.getMessageSourceService();
+		KenyaEMRAccidentService departmentService = Context.getService(KenyaEMRAccidentService.class);
+		if (!Context.isAuthenticated()) {
+			errors.reject("department.auth.required");
+		} else if (mss.getMessage("department.purgeDepartment").equals(action)) {
+			try {
+				departmentService.purgeDepartment(department);
+				httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.delete.success");
+				return "redirect:departmentList.list";
+			}
+			catch (Exception ex) {
+				httpSession.setAttribute(WebConstants.OPENMRS_ERROR_ATTR, "department.delete.failure");
+				log.error("Failed to delete department", ex);
+				return "redirect:departmentForm.form?departmentId=" + request.getParameter("departmentId");
+			}
+		} else {
+			departmentService.saveDepartment(department);
+			httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.saved");
+		}
+		return "redirect:departmentList.list";
+	}
 	
 }
