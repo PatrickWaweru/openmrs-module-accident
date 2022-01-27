@@ -4,19 +4,19 @@
 	<parent>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>kenyaemraccident</artifactId>
-		<version>2.7.3</version>
+		<version>3.1.6</version>
 	</parent>
 
 	<artifactId>kenyaemraccident-omod</artifactId>
 	<packaging>jar</packaging>
-	<name>KenyaEMR Accident OMOD</name>
-	<description>Omod submodule for KenyaEMR Accident</description>
+	<name>Accident OMOD</name>
+	<description>Omod submodule for Accident</description>
 
 	<dependencies>
         <dependency>
             <groupId>org.openmrs.module</groupId>
             <artifactId>kenyaemraccident-api</artifactId>
-            <version>2.7.3</version>
+            <version>3.1.6</version>
         </dependency>
 		<dependency>
 			<groupId>org.openmrs.web</groupId>
@@ -28,6 +28,12 @@
 			<artifactId>openmrs-web</artifactId>
 			<scope>provided</scope>
 			<classifier>tests</classifier>
+		</dependency>
+
+		<dependency>
+			<groupId>org.openmrs.module</groupId>
+			<artifactId>uiframework-api</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 

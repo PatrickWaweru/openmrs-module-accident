@@ -25,16 +25,16 @@
 
     <context:component-scan base-package="org.openmrs.module.kenyaemraccident" />
 
-    <!-- Wraps KenyaEMRAccidentService methods in DB transactions and OpenMRS interceptors,
+    <!-- Wraps AccidentService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->
-    <bean id="kenyaemraccident.KenyaEMRAccidentService"
+    <bean id="kenyaemraccident.AccidentService"
             class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
         <property name="transactionManager">
             <ref bean="transactionManager" />
         </property>
         <property name="target">
-            <bean class="org.openmrs.module.kenyaemraccident.api.impl.KenyaEMRAccidentServiceImpl">
-                <property name="dao" ref="kenyaemraccident.KenyaEMRAccidentDao" />
+            <bean class="org.openmrs.module.kenyaemraccident.api.impl.AccidentServiceImpl">
+                <property name="dao" ref="kenyaemraccident.AccidentDao" />
             </bean>
         </property>
         <property name="preInterceptors">
@@ -45,22 +45,14 @@
         </property>
     </bean>
 
-    <!-- Adds KenyaEMRAccidentService to OpenMRS context so it can be accessed
-    calling Context.getService(KenyaEMRAccidentService.class) -->
+    <!-- Adds AccidentService to OpenMRS context so it can be accessed
+    calling Context.getService(AccidentService.class) -->
     <bean parent="serviceContext">
         <property name="moduleService">
             <list>
-                <value>org.openmrs.module.kenyaemraccident.api.KenyaEMRAccidentService</value>
-                <ref bean="kenyaemraccident.KenyaEMRAccidentService" />
+                <value>org.openmrs.module.kenyaemraccident.api.AccidentService</value>
+                <ref bean="kenyaemraccident.AccidentService" />
             </list>
         </property>
-    </bean>
-
-    <bean id="kenyaemr.app.accident" factory-bean="kenyacore.appFactoryBean" factory-method="createInstance">
-        <constructor-arg value="kenyaemr.accident.home" />
-        <constructor-arg value="Accident" />
-        <constructor-arg value="module/kenyaemraccident/kenyaemraccident.form" />
-        <constructor-arg value="kenyaemraccident:accident-894011712-612x612-96w83hpx.png" />
-        <constructor-arg value="360" />
     </bean>
 </beans>

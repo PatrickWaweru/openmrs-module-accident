@@ -1,2 +1,3 @@
 org/openmrs/module/kenyaemraccident/extension/html/AdminList.class
-org/openmrs/module/kenyaemraccident/web/controller/KenyaEMRAccidentController.class
+org/openmrs/module/kenyaemraccident/web/controller/AccidentController.class
+org/openmrs/module/kenyaemraccident/fragment/controller/UsersFragmentController.class

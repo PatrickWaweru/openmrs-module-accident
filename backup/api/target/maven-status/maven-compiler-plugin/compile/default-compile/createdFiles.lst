@@ -1,0 +1,7 @@
+org/openmrs/module/kenyaemraccident/Department.class
+org/openmrs/module/kenyaemraccident/KenyaEMRAccidentConfig.class
+org/openmrs/module/kenyaemraccident/api/KenyaEMRAccidentService.class
+org/openmrs/module/kenyaemraccident/api/dao/KenyaEMRAccidentDao.class
+org/openmrs/module/kenyaemraccident/Item.class
+org/openmrs/module/kenyaemraccident/KenyaEMRAccidentActivator.class
+org/openmrs/module/kenyaemraccident/api/impl/KenyaEMRAccidentServiceImpl.class

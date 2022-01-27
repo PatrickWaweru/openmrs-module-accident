@@ -4,11 +4,11 @@
 	<parent>
 		<groupId>org.openmrs.module</groupId>
 		<artifactId>kenyaemraccident</artifactId>
-		<version>2.7.3</version>
+		<version>3.1.6</version>
 	</parent>
 
 	<artifactId>kenyaemraccident-api</artifactId>
 	<packaging>jar</packaging>
-	<name>KenyaEMR Accident API</name>
-	<description>API project for KenyaEMR Accident</description>
+	<name>Accident API</name>
+	<description>API project for Accident</description>
 </project>

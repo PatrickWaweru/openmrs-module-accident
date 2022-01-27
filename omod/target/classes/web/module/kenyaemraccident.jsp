@@ -2,46 +2,20 @@
 
 <%@ include file="/WEB-INF/template/header.jsp"%>
 
-<h2><spring:message code="kenyaemraccident.title" /></h2>
+<h2><spring:message code="kenyaemraccident-omod.title" /></h2>
 
 <br/>
-<div class="ke-page-header">
-
-</div>
-
-<div class="ke-page-content">
-
-<form method="post">
-  <fieldset>
-  <table>
+<table>
+  <tr>
+   <th>User Id</th>
+   <th>Username</th>
+  </tr>
+  <c:forEach var="user" items="${users}">
       <tr>
-          <td><openmrs:message code="general.name"/></td>
-          <td>
-              <spring:bind path="department.name">
-                  <input type="text" name="name" value="${status.value}" size="35" />
-                  <c:if test="${status.errorMessage != ''}"><span class="error">${status.errorMessage}</span></c:if>
-              </spring:bind>
-          </td>
-      </tr>
-      <tr>
-          <td valign="top"><openmrs:message code="general.description"/></td>
-          <td valign="top">
-              <spring:bind path="department.description">
-                  <textarea name="description" rows="3" cols="40" onkeypress="return forceMaxLength(this, 1024);" >${status.value}</textarea>
-                  <c:if test="${status.errorMessage != ''}"><span class="error">${status.errorMessage}</span></c:if>
-              </spring:bind>
-          </td>
-      </tr>
-  </table>
-  <br />
-  <input type="submit" value="<openmrs:message code='department.save'/>" name="save">
-  </fieldset>
-</form>
-
-</div>
-
-<div class="ke-page-footer">
-
-</div>
+        <td>${user.userId}</td>
+        <td>${user.systemId}</td>
+      </tr>		
+  </c:forEach>
+</table>
 
 <%@ include file="/WEB-INF/template/footer.jsp"%>
