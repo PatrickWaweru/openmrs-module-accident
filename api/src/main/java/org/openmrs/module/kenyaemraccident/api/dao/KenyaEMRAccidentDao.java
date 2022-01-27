@@ -9,15 +9,19 @@
  */
 package org.openmrs.module.kenyaemraccident.api.dao;
 
+import java.util.List;
+
 import org.hibernate.criterion.Restrictions;
 import org.openmrs.api.db.hibernate.DbSession;
 import org.openmrs.api.db.hibernate.DbSessionFactory;
+import org.openmrs.module.kenyaemraccident.Department;
 import org.openmrs.module.kenyaemraccident.Item;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository("kenyaemraccident.KenyaEMRAccidentDao")
-public class KenyaEMRAccidentDao {
+public class KenyaEMRAccidentDao 
+{
 	
 	@Autowired
 	DbSessionFactory sessionFactory;
@@ -34,4 +38,34 @@ public class KenyaEMRAccidentDao {
 		getSession().saveOrUpdate(item);
 		return item;
 	}
+
+	/**
+     * @see org.openmrs.module.department.api.db.DepartmentDAO#getAllDepartments()
+     */
+    //@Override
+    public List<Department> getAllDepartments() {
+        return sessionFactory.getCurrentSession().createCriteria(Department.class).list();
+    }
+    /**
+     * @see org.openmrs.module.department.api.DepartmentService#getDepartment(java.lang.Integer)
+     */
+    //@Override
+    public Department getDepartment(Integer departmentId) {
+        return (Department) sessionFactory.getCurrentSession().get(Department.class, departmentId);
+    }
+    /**
+     * @see org.openmrs.module.department.api.db.DepartmentDAO#saveDepartment(org.openmrs.module.department.Department)
+     */
+    //@Override
+    public Department saveDepartment(Department department) {
+        sessionFactory.getCurrentSession().save(department);
+        return department;
+    }
+    /**
+     * @see org.openmrs.module.department.api.db.DepartmentDAO#purgeDepartment(org.openmrs.module.department.Department)
+     */
+    //@Override
+    public void purgeDepartment(Department department) {
+        sessionFactory.getCurrentSession().delete(department);
+    }
 }
