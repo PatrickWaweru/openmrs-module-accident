@@ -39,7 +39,8 @@ import org.springframework.web.context.request.WebRequest;
  */
 @Controller("${rootrootArtifactid}.KenyaEMRAccidentController")
 //@RequestMapping(value = "module/${rootArtifactid}/${rootArtifactid}.form")
-@RequestMapping(value = "module/kenyaemraccident/kenyaemraccident.form")
+//@RequestMapping(value = "module/kenyaemraccident/kenyaemraccident.form")
+@RequestMapping(value = "module/kenyaemraccident/")
 public class KenyaEMRAccidentController {
 	
 	/** Logger for this class and subclasses */
@@ -48,9 +49,14 @@ public class KenyaEMRAccidentController {
 	@Autowired
 	UserService userService;
 	
+	@Autowired
+	KenyaEMRAccidentService accidentService;
+	
 	/** Success form view name */
 	//private final String VIEW = "/module/${rootArtifactid}/${rootArtifactid}";
-	private final String VIEW = "/module/kenyaemraccident/kenyaemraccident";
+	private final String FORM_VIEW = "/module/kenyaemraccident/kenyaemraccident";
+	
+	private final String SUCCESS_VIEW = "/module/kenyaemraccident/departmentlist";
 	
 	/**
 	 * Initially called after the getUsers method to get the landing form name
@@ -62,10 +68,22 @@ public class KenyaEMRAccidentController {
 	// 	model.addAttribute("person", new Person());
 	// 	return VIEW;
 	// }
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping(value = "/kenyaemraccident.form", method = RequestMethod.GET)
 	public String onGet(Model model) {
 		model.addAttribute("department", new Department());
-		return VIEW;
+		return FORM_VIEW;
+	}
+	
+	@RequestMapping(value = "/departmentList.list", method = RequestMethod.GET)
+	public String onSuccessSave(Model model) {
+		//model.addAttribute("department", new Department());
+		//List<User> users = userService.getAllUsers();
+		List<Department> departments = accidentService.getAllDepartments();
+		model.addAttribute("departments", departments);
+		// this object will be made available to the jsp page under the variable name
+		// that is defined in the @ModuleAttribute tag
+		//return users;
+		return SUCCESS_VIEW;
 	}
 	
 	/**
@@ -113,7 +131,8 @@ public class KenyaEMRAccidentController {
 	 * @return
 	 */
 	////@RequestMapping(value = "/module/kenyaemraccident/kenyaemraccident.form", method = RequestMethod.POST)
-	@RequestMapping(method = RequestMethod.POST)
+	////@RequestMapping(method = RequestMethod.POST)
+	@RequestMapping(value = "/kenyaemraccident.form", method = RequestMethod.POST)
 	public String submitDepartment(WebRequest request, HttpSession httpSession, ModelMap model,
 	        @RequestParam(required = false, value = "action") String action,
 	        @ModelAttribute("department") Department department, BindingResult errors) {
@@ -135,6 +154,7 @@ public class KenyaEMRAccidentController {
 			}
 		} else {
 			departmentService.saveDepartment(department);
+			accidentService.saveDepartment(department);
 			httpSession.setAttribute(WebConstants.OPENMRS_MSG_ATTR, "department.saved");
 		}
 		return "redirect:departmentList.list";

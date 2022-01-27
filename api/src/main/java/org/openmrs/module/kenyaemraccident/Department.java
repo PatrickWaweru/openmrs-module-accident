@@ -13,10 +13,13 @@ public class Department extends BaseOpenmrsData {
 	
 	@Id
 	@GeneratedValue
+	@Column(name = "department_id")
 	private Integer departmentId;
 	
+	@Column(name = "name")
 	private String name;
 	
+	@Column(name = "description")
 	private String description;
 	
 	public Integer getDepartmentId() {

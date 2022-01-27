@@ -7,13 +7,15 @@
 <br/>
 <table>
   <tr>
-   <th>User Id</th>
-   <th>Username</th>
+   <th>Department Id</th>
+   <th>Name</th>
+   <th>Description</th>
   </tr>
-  <c:forEach var="user" items="${users}">
+  <c:forEach var="department" items="${departments}">
       <tr>
-        <td>${user.userId}</td>
-        <td>${user.systemId}</td>
+        <td>${department.id}</td>
+        <td>${department.name}</td>
+        <td>${department.description}</td>
       </tr>		
   </c:forEach>
 </table>
