@@ -55,4 +55,12 @@
             </list>
         </property>
     </bean>
+
+    <bean id="kenyaemr.app.accident" factory-bean="kenyacore.appFactoryBean" factory-method="createInstance">
+        <constructor-arg value="kenyaemr.accident.home" />
+        <constructor-arg value="Accident" />
+        <constructor-arg value="module/kenyaemraccident/kenyaemraccident.form" />
+        <constructor-arg value="kenyaemraccident:accident-894011712-612x612-96w83hpx.png" />
+        <constructor-arg value="360" />
+    </bean>
 </beans>

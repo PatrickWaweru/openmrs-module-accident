@@ -5,6 +5,11 @@
 <h2><spring:message code="kenyaemraccident.title" /></h2>
 
 <br/>
+<div class="ke-page-header">
+
+</div>
+
+<div class="ke-page-content">
 
 <form method="post">
   <fieldset>
@@ -32,5 +37,11 @@
   <input type="submit" value="<openmrs:message code='department.save'/>" name="save">
   </fieldset>
 </form>
+
+</div>
+
+<div class="ke-page-footer">
+
+</div>
 
 <%@ include file="/WEB-INF/template/footer.jsp"%>
