@@ -12,7 +12,7 @@
 	<artifactId>kenyaemraccident</artifactId>
 	<version>3.1.6</version>
 	<packaging>pom</packaging>
-	<name>Accident</name>
+	<name>KenyaEMR Accident</name>
 	<description>The kenyaEMR accident module</description>
 
 	<url>https://wiki.openmrs.org/x/FQ4z</url>
@@ -28,6 +28,37 @@
 		<module>omod</module>
 	</modules>
 
+	<properties>
+		<!-- <openmrsPlatformVersion>2.3.3</openmrsPlatformVersion>
+        <openMRSVersion>2.3.3</openMRSVersion> -->
+		<openmrsPlatformVersion>1.12.0</openmrsPlatformVersion>
+        <openMRSVersion>1.12.0</openMRSVersion>
+        <!-- Module dependencies -->
+        <appframeworkVersion>2.2.1</appframeworkVersion>
+        <calculationVersion>1.0</calculationVersion>
+        <htmlformentryVersion>2.3</htmlformentryVersion>
+        <htmlwidgetsVersion>1.6.6</htmlwidgetsVersion>
+        <idgenVersion>2.6</idgenVersion>
+        <metadatadeployVersion>1.2</metadatadeployVersion>
+        <metadatasharingVersion>1.1.8</metadatasharingVersion>
+        <reportingVersion>0.9.8.1</reportingVersion>
+        <serializationxstreamVersion>0.2.7</serializationxstreamVersion>
+        <uiframeworkVersion>3.3.1</uiframeworkVersion>
+        <kenyacoreVersion>2.4.1</kenyacoreVersion>
+        <kenyauiVersion>2.1.2-SNAPSHOT</kenyauiVersion>
+        <kenyaemrVersion>18.1.2</kenyaemrVersion>
+        <jodaTimeVersion>2.9.1</jodaTimeVersion>
+        <webservices.restVersion>2.1</webservices.restVersion>
+        <logicVersion>0.5.2</logicVersion>
+        <uilibraryVersion>2.0.4</uilibraryVersion>
+        <reportingcompatibilityVersion>2.0.7</reportingcompatibilityVersion>
+        <groovyVersion>2.2.4</groovyVersion>
+        <kenyaemrOrderentryVersion>1.2.1</kenyaemrOrderentryVersion>
+        <facilityReportingVersion>1.2.0</facilityReportingVersion>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 	<dependencyManagement>
 		<dependencies>
 			<!-- Importing versions from refapp distro -->
@@ -38,6 +69,238 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+			<!-- Begin OpenMRS modules -->
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyaemr-api</artifactId>
+                <version>${kenyaemrVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyaemr-omod</artifactId>
+                <version>${kenyaemrVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>appframework-api</artifactId>
+                <version>${appframeworkVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>calculation-api</artifactId>
+                <version>${calculationVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>htmlformentry-api</artifactId>
+                <version>${htmlformentryVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>htmlwidgets-api</artifactId>
+                <version>${htmlwidgetsVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>idgen-api</artifactId>
+                <version>${idgenVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>metadatadeploy-api</artifactId>
+                <version>${metadatadeployVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>metadatasharing-api</artifactId>
+                <version>${metadatasharingVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>reporting-api</artifactId>
+                <version>${reportingVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>serialization.xstream-api</artifactId>
+                <version>${serializationxstreamVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>uiframework-api</artifactId>
+                <version>${uiframeworkVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyacore-api</artifactId>
+                <version>${kenyacoreVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyacore-test</artifactId>
+                <version>${kenyacoreVersion}</version>
+                <scope>test</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyaui-api</artifactId>
+                <version>${kenyauiVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>webservices.rest-omod</artifactId>
+                <version>${webservicesRestVersion}</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>webservices.rest-omod-common</artifactId>
+                <version>${webservicesRestVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>webservices.rest-omod-1.8</artifactId>
+                <version>${webservicesRestVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>webservices.rest-omod-common</artifactId>
+                <version>${webservicesRestVersion}</version>
+                <classifier>tests</classifier>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>reportingcompatibility-api</artifactId>
+                <version>${reportingcompatibilityVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>groovy-api</artifactId>
+                <version>${groovyVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>kenyaemrorderentry-api</artifactId>
+                <version>${kenyaemrOrderentryVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.module</groupId>
+                <artifactId>facilityreporting-api</artifactId>
+                <version>${facilityReportingVersion}</version>
+                <scope>provided</scope>
+            </dependency>
+            <!-- End OpenMRS modules -->
+
+            <!-- Begin OpenMRS core -->
+
+            <dependency>
+                <groupId>org.openmrs.api</groupId>
+                <artifactId>openmrs-api</artifactId>
+                <version>${openMRSVersion}</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.web</groupId>
+                <artifactId>openmrs-web</artifactId>
+                <version>${openMRSVersion}</version>
+                <type>jar</type>
+                <scope>provided</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.api</groupId>
+                <artifactId>openmrs-api</artifactId>
+                <version>${openMRSVersion}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.web</groupId>
+                <artifactId>openmrs-web</artifactId>
+                <version>${openMRSVersion}</version>
+                <type>test-jar</type>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.openmrs.test</groupId>
+                <artifactId>openmrs-test</artifactId>
+                <version>${openMRSVersion}</version>
+                <type>pom</type>
+                <scope>test</scope>
+            </dependency>
+
+            <!-- End OpenMRS core -->
+
+            <!-- Begin external libraries -->
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.13.1</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.hamcrest</groupId>
+                <artifactId>hamcrest-all</artifactId>
+                <version>1.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${jodaTimeVersion}</version>
+            </dependency>
+
+
+            <!-- End external libraries -->
 		</dependencies>
 	</dependencyManagement>
 
@@ -65,7 +328,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
-	<properties>
+	<!-- <properties>
 		<openmrsPlatformVersion>1.11.6</openmrsPlatformVersion>
-	</properties>
+	</properties> -->
 </project>

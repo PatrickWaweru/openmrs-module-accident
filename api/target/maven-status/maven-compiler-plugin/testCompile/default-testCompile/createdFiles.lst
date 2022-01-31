@@ -1,2 +1,2 @@
-org/openmrs/module/kenyaemraccident/api/dao/AccidentDaoTest.class
-org/openmrs/module/kenyaemraccident/api/AccidentServiceTest.class
+org/openmrs/module/kenyaemraccident/dao/AccidentDaoTest.class
+org/openmrs/module/kenyaemraccident/AccidentServiceTest.class

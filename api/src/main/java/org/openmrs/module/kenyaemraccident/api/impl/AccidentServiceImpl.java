@@ -9,9 +9,12 @@
  */
 package org.openmrs.module.kenyaemraccident.api.impl;
 
+import java.util.List;
+
 import org.openmrs.api.APIException;
 import org.openmrs.api.UserService;
 import org.openmrs.api.impl.BaseOpenmrsService;
+import org.openmrs.module.kenyaemraccident.Department;
 import org.openmrs.module.kenyaemraccident.Item;
 import org.openmrs.module.kenyaemraccident.api.AccidentService;
 import org.openmrs.module.kenyaemraccident.api.dao.AccidentDao;
@@ -48,5 +51,46 @@ public class AccidentServiceImpl extends BaseOpenmrsService implements AccidentS
 		}
 		
 		return dao.saveItem(item);
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#getAllDepartments()
+	 */
+	@Override
+	public List<Department> getAllDepartments() {
+		return dao.getAllDepartments();
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#getDepartment(java.lang.Integer)
+	 */
+	@Override
+	public Department getDepartment(Integer departmentId) {
+		return dao.getDepartment(departmentId);
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#saveDepartment(org.openmrs.module.department.Department)
+	 */
+	@Override
+	public Department saveDepartment(Department department) {
+		// if (department.getOwner() == null) {
+		// 	department.setOwner(userService.getUser(1));
+		// }
+		
+		return dao.saveDepartment(department);
+	}
+	
+	/**
+	 * @see org.openmrs.module.department.api.DepartmentService#purgeDepartment(org.openmrs.module.department.Department)
+	 */
+	@Override
+	public void purgeDepartment(Department department) {
+		dao.purgeDepartment(department);
+	}
+	
+	@Override
+	public Department getDepartmentByUuid(String uuid) throws APIException {
+		return dao.getDepartmentByUuid(uuid);
 	}
 }

@@ -1,3 +1,5 @@
 /opt/develop/palladium/init/kenyaemraccident/omod/src/main/java/org/openmrs/module/kenyaemraccident/fragment/controller/UsersFragmentController.java
 /opt/develop/palladium/init/kenyaemraccident/omod/src/main/java/org/openmrs/module/kenyaemraccident/web/controller/AccidentController.java
+/opt/develop/palladium/init/kenyaemraccident/omod/src/main/java/org/openmrs/module/kenyaemraccident/fragment/controller/DepartmentsListFragmentController.java
 /opt/develop/palladium/init/kenyaemraccident/omod/src/main/java/org/openmrs/module/kenyaemraccident/extension/html/AdminList.java
+/opt/develop/palladium/init/kenyaemraccident/omod/src/main/java/org/openmrs/module/kenyaemraccident/fragment/controller/NewDepartmentFragmentController.java

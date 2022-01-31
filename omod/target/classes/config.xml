@@ -4,7 +4,7 @@
 	
 	<!-- Base Module Properties -->
 	<id>kenyaemraccident</id>
-	<name>Accident</name>
+	<name>KenyaEMR Accident</name>
 	<version>3.1.6</version>
 	<package>org.openmrs.module.kenyaemraccident</package>
 	<author>patrick</author>
@@ -17,13 +17,13 @@
 	<!-- <updateURL>https://modules.openmrs.org/modules/download/kenyaemraccident/update.rdf</updateURL> -->
 	<!-- /Base Module Properties -->
 	
-	<require_version>1.11.6</require_version>
+	<require_version>1.12.0</require_version>
 
 	<require_modules>
-		<require_module version="${appframeworkVersion}">
+		<require_module version="2.2.1">
 			org.openmrs.module.appframework
 		</require_module>
-		<require_module version="${uiframeworkVersion}">
+		<require_module version="3.3.1">
 			org.openmrs.module.uiframework
 		</require_module>
 		<require_module version="${uicommonsModuleVersion}">
@@ -44,7 +44,23 @@
 		<aware_of_module>org.openmrs.module.legacyui</aware_of_module>
 	</aware_of_modules>
 	
-	
+	<require_modules>
+		<require_module version="18.1.2">org.openmrs.module.kenyaemr</require_module>
+		<require_module version="2.2.1">org.openmrs.module.appframework</require_module>
+		<require_module version="1.0">org.openmrs.calculation</require_module>
+		<require_module version="2.3">org.openmrs.module.htmlformentry</require_module>
+		<require_module version="2.6">org.openmrs.module.idgen</require_module>
+		<require_module version="2.4.1">org.openmrs.module.kenyacore</require_module>
+		<require_module version="2.1.2-SNAPSHOT">org.openmrs.module.kenyaui</require_module>
+		<require_module version="1.1.8">org.openmrs.module.metadatasharing</require_module>
+		<require_module version="0.9.8.1">org.openmrs.module.reporting</require_module>
+		<require_module version="3.3.1">org.openmrs.module.uiframework</require_module>
+
+		<require_module version="2.0.7">org.openmrs.module.reportingcompatibility</require_module>
+		<require_module version="2.2.4">org.openmrs.module.groovy</require_module>
+		<require_module version="1.2.1">org.openmrs.module.kenyaemrorderentry</require_module>
+		<require_module version="1.2.0">org.openmrs.module.facilityreporting</require_module>
+	</require_modules>
 	<!-- AOP
 	<advice>
 		<point>org.openmrs.api.FormService</point>
