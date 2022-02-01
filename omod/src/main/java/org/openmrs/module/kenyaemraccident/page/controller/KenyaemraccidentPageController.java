@@ -47,7 +47,7 @@ public class KenyaemraccidentPageController {
 	
 	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model, PageRequest pageRequest) {
 	public void get(UiUtils ui, PageModel model, PageRequest pageRequest) {
-	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model) {
+		//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model) {
 		AccidentService accidentService = Context.getService(AccidentService.class);
 		//		try {
 		//			AppDescriptor currentApp = kenyaUi2.getCurrentApp(pageRequest);

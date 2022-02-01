@@ -9,7 +9,7 @@
 	<package>org.openmrs.module.kenyaemraccident</package>
 	<author>patrick</author>
 	<description>
-			The kenyaEMR accident module
+			The kenyaEMR accident module experiment
 	</description>
 
 	<activator>org.openmrs.module.kenyaemraccident.AccidentActivator</activator>
