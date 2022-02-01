@@ -61,7 +61,7 @@
         <constructor-arg value="Accident" />
         <constructor-arg value="kenyaemraccident/kenyaemraccident.page" />
         <constructor-arg value="kenyaemraccident:accident-894011712-612x612-96w83hpx.png" />
-        <constructor-arg value="360" />
+        <constructor-arg value="3600" />
     </bean>
 
 </beans>

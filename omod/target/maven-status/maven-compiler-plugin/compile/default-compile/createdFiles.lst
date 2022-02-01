@@ -1,5 +1,7 @@
 org/openmrs/module/kenyaemraccident/fragment/controller/NewDepartmentFragmentController.class
 org/openmrs/module/kenyaemraccident/fragment/controller/DepartmentsListFragmentController.class
 org/openmrs/module/kenyaemraccident/fragment/controller/UsersFragmentController.class
+org/openmrs/module/kenyaemraccident/page/controller/NewDepartmentFormPageController.class
 org/openmrs/module/kenyaemraccident/extension/html/AdminList.class
+org/openmrs/module/kenyaemraccident/page/controller/KenyaemraccidentPageController.class
 org/openmrs/module/kenyaemraccident/web/controller/AccidentController.class

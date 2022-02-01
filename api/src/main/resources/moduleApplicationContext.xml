@@ -24,6 +24,8 @@
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
     <context:component-scan base-package="org.openmrs.module.kenyaemraccident" />
+    <context:annotation-config />
+    <context:component-scan base-package="package.autowire.context" />
 
     <!-- Wraps AccidentService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->
@@ -61,7 +63,7 @@
         <constructor-arg value="Accident" />
         <constructor-arg value="kenyaemraccident/kenyaemraccident.page" />
         <constructor-arg value="kenyaemraccident:accident-894011712-612x612-96w83hpx.png" />
-        <constructor-arg value="360" />
+        <constructor-arg value="3600" />
     </bean>
 
 </beans>
