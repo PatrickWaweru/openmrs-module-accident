@@ -24,6 +24,8 @@
   		    http://www.springframework.org/schema/util/spring-util-3.0.xsd">
 
     <context:component-scan base-package="org.openmrs.module.kenyaemraccident" />
+    <context:annotation-config />
+    <context:component-scan base-package="package.autowire.context" />
 
     <!-- Wraps AccidentService methods in DB transactions and OpenMRS interceptors,
     which set audit info like dateCreated, changedBy, etc.-->

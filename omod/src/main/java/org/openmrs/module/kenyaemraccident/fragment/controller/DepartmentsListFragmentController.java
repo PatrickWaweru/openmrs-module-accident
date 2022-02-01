@@ -19,6 +19,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.openmrs.api.context.Context;
 import org.openmrs.module.kenyaui.*;
 import org.openmrs.module.kenyaui.KenyaUiUtils;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.sql.Date;
 
 /**
  *  * Controller for a fragment that shows all departments  
@@ -34,10 +37,11 @@ public class DepartmentsListFragmentController {
 	//	KenyaUiUtils kenyaUi;
 	
 	// public void controller(FragmentModel model, @SpringBean("accidentService") AccidentService service)
-	// public void controller(FragmentModel model, @SpringBean KenyaUiUtils kenyaUi, @SpringBean("accidentService") AccidentService service) {
+	//public void controller(FragmentModel model, @SpringBean KenyaUiUtils kenyaUi, @SpringBean("accidentService") AccidentService service) {
 	public void controller(FragmentModel model) {
 		AccidentService accidentService = Context.getService(AccidentService.class);
-		model.addAttribute("departments", accidentService.getAllDepartments());
+		//model.addAttribute("departments", accidentService.getAllDepartments());
+		model.addAttribute("today", "20223101");
 	}
 	
 }

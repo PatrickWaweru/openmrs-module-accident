@@ -29,6 +29,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.openmrs.module.kenyaui.annotation.*;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -37,7 +38,6 @@ import java.util.Comparator;
 import java.util.List;
 
 @AppPage("kenyaemr.accident.home")
-@Controller
 public class KenyaemraccidentPageController {
 	
 	protected static final Log log = LogFactory.getLog(KenyaemraccidentPageController.class);
@@ -46,8 +46,8 @@ public class KenyaemraccidentPageController {
 	//	KenyaUiUtils kenyaUi2;
 	
 	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model, PageRequest pageRequest) {
-	public void get(UiUtils ui, PageModel model, PageRequest pageRequest) {
-	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model) {
+	public void controller(UiUtils ui, PageModel model, PageRequest pageRequest) {
+		//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model) {
 		AccidentService accidentService = Context.getService(AccidentService.class);
 		//		try {
 		//			AppDescriptor currentApp = kenyaUi2.getCurrentApp(pageRequest);
