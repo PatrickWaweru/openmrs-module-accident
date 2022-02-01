@@ -25,10 +25,13 @@ import org.openmrs.ui.framework.page.PageModel;
 import org.openmrs.ui.framework.page.PageRequest;
 import org.openmrs.util.PrivilegeConstants;
 import org.openmrs.module.appframework.domain.AppDescriptor;
+import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.openmrs.module.kenyaui.annotation.*;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.openmrs.ui.framework.page.*;
 
 import java.lang.annotation.Annotation;
 import java.util.ArrayList;
@@ -36,19 +39,35 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
-@AppPage("kenyaemr.accident.home")
+//@AppPage("kenyaemr.accident.home")
 @Controller
+@AppPage("kenyaemr.accident.home")
 public class KenyaemraccidentPageController {
 	
 	protected static final Log log = LogFactory.getLog(KenyaemraccidentPageController.class);
+	
+	public void controller(UiUtils ui, PageModel model, PageContext pageContext) {
+		//model.addAttribute("returnUrl", url);
+		AccidentService accidentService = Context.getService(AccidentService.class);
+		AppDescriptor app = Context.getService(AppFrameworkService.class).getApp("kenyaemr.accident.home");
+		pageContext.getRequest().getRequest().setAttribute("kenyaui.current-app", app);
+		pageContext.getModel().addAttribute("currentApp", app);
+		System.err.println("controller was called");
+		log.info("controller was called");
+	}
 	
 	//	@Autowired
 	//	KenyaUiUtils kenyaUi2;
 	
 	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model, PageRequest pageRequest) {
-	public void get(UiUtils ui, PageModel model, PageRequest pageRequest) {
+	public void get(UiUtils ui, PageModel model, PageRequest pageRequest, PageContext pageContext) {
 		//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model) {
 		AccidentService accidentService = Context.getService(AccidentService.class);
+		AppDescriptor app = Context.getService(AppFrameworkService.class).getApp("kenyaemr.accident.home");
+		pageContext.getRequest().getRequest().setAttribute("kenyaui.current-app", app);
+		pageContext.getModel().addAttribute("currentApp", app);
+		System.err.println("Get was called: Home Page controller");
+		log.info("Get was called: Home Page controller");
 		//		try {
 		//			AppDescriptor currentApp = kenyaUi2.getCurrentApp(pageRequest);
 		//			log.info("main page controller: " + currentApp);

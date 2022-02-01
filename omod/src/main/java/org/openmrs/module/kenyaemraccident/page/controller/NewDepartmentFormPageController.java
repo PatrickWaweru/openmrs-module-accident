@@ -25,13 +25,17 @@ import org.openmrs.ui.framework.page.PageModel;
 import org.openmrs.ui.framework.page.PageRequest;
 import org.openmrs.util.PrivilegeConstants;
 import org.openmrs.module.appframework.domain.AppDescriptor;
+import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 import org.openmrs.module.kenyaui.annotation.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import org.openmrs.ui.framework.page.*;
 
+@Controller
 @AppPage("kenyaemr.accident.home")
 public class NewDepartmentFormPageController {
 	
@@ -41,9 +45,13 @@ public class NewDepartmentFormPageController {
 	//	KenyaUiUtils kenyaUi;
 	
 	//public void get(@SpringBean KenyaUiUtils kenyaUi, UiUtils ui, PageModel model, PageRequest pageRequest) {
-	public void get(UiUtils ui, PageModel model, PageRequest pageRequest) {
+	public void get(UiUtils ui, PageModel model, PageRequest pageRequest, PageContext pageContext) {
 		AccidentService accidentService = Context.getService(AccidentService.class);
 		//AppDescriptor currentApp = kenyaUi.getCurrentApp(pageRequest);
-		log.info("new department page controller");
+		AppDescriptor app = Context.getService(AppFrameworkService.class).getApp("kenyaemr.accident.home");
+		pageContext.getRequest().getRequest().setAttribute("kenyaui.current-app", app);
+		pageContext.getModel().addAttribute("currentApp", app);
+		System.err.println("Get was called: new department page controller");
+		log.info("Get was called: new department page controller");
 	}
 }
