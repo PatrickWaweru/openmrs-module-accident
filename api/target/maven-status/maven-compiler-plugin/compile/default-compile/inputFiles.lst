@@ -1,7 +1,0 @@
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/Item.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/AccidentActivator.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/AccidentConfig.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/api/impl/AccidentServiceImpl.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/api/AccidentService.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/api/dao/AccidentDao.java
-/opt/develop/palladium/init/kenyaemraccident/api/src/main/java/org/openmrs/module/kenyaemraccident/Department.java

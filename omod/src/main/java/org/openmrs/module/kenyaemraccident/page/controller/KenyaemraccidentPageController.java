@@ -27,7 +27,7 @@ import org.openmrs.util.PrivilegeConstants;
 import org.openmrs.module.appframework.domain.AppDescriptor;
 import org.openmrs.module.appframework.service.AppFrameworkService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.openmrs.module.kenyaui.annotation.*;
+import org.openmrs.module.kenyaui.annotation.AppPage;
 import org.springframework.beans.factory.annotation.Required;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -40,7 +40,7 @@ import java.util.Comparator;
 import java.util.List;
 
 //@AppPage("kenyaemr.accident.home")
-@Controller
+//@Controller
 @AppPage("kenyaemr.accident.home")
 public class KenyaemraccidentPageController {
 	
